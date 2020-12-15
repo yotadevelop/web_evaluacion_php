@@ -6,8 +6,9 @@ require_once("Conexion.php");
 
 class ClienteModel{
 
-    public function allClient(){
-        $stm = Conexion::conector()->prepare("SELECT * FROM cliente ");
+    public function findClienteRut($rut){
+        $stm = Conexion::conector()->prepare("SELECT * FROM cliente WHERE rut_cliente=:A");
+        $stm->bindParam(":A", $rut);
         $stm->execute();
         return $stm->fetchAll(\PDO::FETCH_ASSOC);
     }

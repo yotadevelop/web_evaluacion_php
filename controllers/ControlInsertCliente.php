@@ -39,7 +39,7 @@ class ControlInsertCliente{
         }else{
             $_SESSION['resp']="ERROR en la base de datos";
         }
-        header("Location: ../views/CrearCliente.php");
+        header("Location: ../views/indexVend.php");
     }
 }
 $obj = new ControlInsertCliente();

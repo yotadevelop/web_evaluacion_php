@@ -37,7 +37,7 @@ session_start();
                     <button class="btn green w100" name="bt_vend">Vendedor</button>                 
                 </form>            
             </div>
- <!--------FORMULARIO---ADMINISTRADOR---------->
+            <!--------FORMULARIO---ADMINISTRADOR---------->
                 <div class="col l4 m4 s12 b1">
                         <?php if(!isset($_SESSION['rol'])) {?>
                         <h3>Acceso Admin</h3>
@@ -81,7 +81,7 @@ session_start();
         </div>
         <h6><a href="Autor.php" class="btn black">creado por</a></h6>
     </div>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

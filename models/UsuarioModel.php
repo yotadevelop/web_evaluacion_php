@@ -30,17 +30,16 @@ class UsuarioModel{
         return $stm->execute();
     }
 
-    public function editar($nombre, $estado, $rut){
-        $stm = Conexion::conector()->prepare("UPDATE usuario SET nombre=:A, estado=:B, WHERE rut=:C");
-        $stm->bindParam(":A",$nombre);
-        $stm->bindParam(":B",$estado);
-        $stm->bindParam(":C",$rut);
+    public function editar($estado, $rut){
+        $stm = Conexion::conector()->prepare("UPDATE usuario SET estado=:A, WHERE rut=:B");
+        $stm->bindParam(":A",$estado);
+        $stm->bindParam(":B",$rut);
         return $stm->execute();
     }
     
 
     public function logUser($rut, $clave){
-        $stm = Conexion::conector()->prepare("SELECT * FROM usuario WHERE rut=:A AND clave=:B");
+        $stm = Conexion::conector()->prepare("SELECT * FROM usuario WHERE rut=:A AND clave=:B AND rol='administrador'");
         $stm->bindParam(":A",$rut);
         $stm->bindParam(":B",md5($clave));
         $stm->execute();

@@ -34,7 +34,7 @@ class ControlLogVend{
         }
         $_SESSION['vendedor'] = $data[0];
 
-        header("Location: ../views/CrearCliente.php");
+        header("Location: ../views/indexVend.php");
     }
 }
 

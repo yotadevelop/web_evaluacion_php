@@ -17,7 +17,6 @@ class ControlRol{
         session_start();
         if(isset($this->vend)){
             $_SESSION['rol'] ="ON";
-            
         }else{
             unset($_SESSION['rol']);
         }

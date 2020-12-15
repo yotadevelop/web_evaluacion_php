@@ -30,7 +30,15 @@ if (isset($_SESSION['usuario'])) {
 <body class="blue" style="font-family: 'Dosis', sans-serif;">
 
     <?php if (isset($_SESSION['usuario'])) { ?>
-        <a class="btn w50 green">Gestion Usuario</a><a href="salir.php" class="btn w50 green">Salir</a>
+        <!--<a class="btn w50 green">Gestion Usuario</a><a href="salir.php" class="btn w50 green">Salir</a>-->
+        <nav>
+    <div class="nav-wrapper green">
+      <a href="#" class="brand-logo center">Gestion Usuario</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="salir.php">Salir</a></li>
+      </ul>
+    </div>
+  </nav>
 
         <div class="row">
             <div class="col l1">
@@ -140,5 +148,4 @@ if (isset($_SESSION['usuario'])) {
         });
     </script>
 </body>
-
 </html>
